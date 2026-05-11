@@ -158,6 +158,7 @@ public class UserImpl implements IUserServices {
 	            .role(us.getRole().toString())
 	            .build();	
 	}
+	/*
 	@Transactional(rollbackFor = Exception.class)
 	@Override
 	public void mailValidate(String id) throws Exception {
@@ -173,16 +174,16 @@ public class UserImpl implements IUserServices {
 		us.setEnabled(true);
 		usR.save(us);
 	}
-	/*@Override
+	@Override
 	public void requestPasswordReset(String userName) throws Exception {
 		
 		User us = usR.findById(userName)
 				.orElseThrow(() -> new WebServiceExceptions("User not found"));
 			
 		mailS.sendResetPasswordEmail(us.getEmail(), us.getUserName());
-	}*/
+	}
 
-	/*@Transactional(rollbackFor = Exception.class)
+	 @Transactional(rollbackFor = Exception.class)
 	@Override
 	public void changePassword(com.betacom.pr.dto.inputs.ChangePwdReq req) throws Exception {
 		
@@ -192,4 +193,5 @@ public class UserImpl implements IUserServices {
 		us.setPassword(passwordEncoder.encode(req.getNewPassword()));
 		usR.save(us);
 	}
+	*/
 }

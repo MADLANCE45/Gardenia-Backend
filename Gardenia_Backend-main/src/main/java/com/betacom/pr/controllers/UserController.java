@@ -13,7 +13,7 @@ import com.betacom.pr.services.interfaces.IUserServices;
 
 import lombok.RequiredArgsConstructor;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:5173")
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("rest/user")
@@ -117,6 +117,7 @@ public class UserController {
 		}
 		return ResponseEntity.status(status).body(r);
 	}
+	/*
 	@GetMapping("/emailValidate")
 	public ResponseEntity<Resp> emailValidate(@RequestParam(required = true) String id) {
 		Resp r = new Resp();
@@ -160,5 +161,5 @@ public class UserController {
 			}
 			return ResponseEntity.status(status).body(r);
 		}
-
+*/
 }
