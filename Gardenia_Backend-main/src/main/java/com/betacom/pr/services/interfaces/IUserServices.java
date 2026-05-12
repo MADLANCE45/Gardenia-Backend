@@ -17,7 +17,7 @@ public interface IUserServices {
 	void create(UserReq req) throws Exception;
 	void update(UserReq req) throws Exception;
 	void delete(String userName) throws Exception;
-	void mailValidate(String id) throws Exception;
+	//void mailValidate(String id) throws Exception;
 	LoginDTO login(LoginReq req) throws Exception;
 	List<UserDTO> list();
 	UserDTO getByUserName(String userName) throws Exception;
